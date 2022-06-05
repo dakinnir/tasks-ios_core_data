@@ -1,8 +1,8 @@
 //
-//  Utils.swift
+//  Extensions.swift
 //  Tasks
 //
-//  Created by Daniel Akinniranye on 5/23/22.
+//  Created by Daniel Akinniranye on 6/5/22.
 //
 
 import Foundation
@@ -22,3 +22,13 @@ extension Date {
 }
 
 public var currentDate = Date()
+
+
+extension ViewController {
+    func setupNavigationBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor(named: "AppColor") ?? .blue,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 35, weight: UIFont.Weight.bold)]
+    }
+}
